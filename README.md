@@ -14,10 +14,11 @@ Add this snippet to your `functions.php` file to sync your login page with the g
 ```php
 /**
  * Enqueue SPE Team Global Login Assets
+ * Uses the @latest tag to automatically fetch the most recent GitHub Release.
  */
 add_action('login_enqueue_scripts', function() {
-    // Replace [username] and [repo] with your actual GitHub details
-    $url = '[https://cdn.jsdelivr.net/gh/](https://cdn.jsdelivr.net/gh/)[username]/[repo]/global-login.css';
+    // Using @latest tells jsDelivr to look for your most recent GitHub Release
+    $url = 'https://cdn.jsdelivr.net/gh/teamspeau/wp-assets@latest/global-login.css';
     
-    wp_enqueue_style('spe-global-styles', $url, array(), '1.0.0');
+    wp_enqueue_style('spe-global-styles', $url, array(), null);
 });
