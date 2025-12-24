@@ -1,0 +1,129 @@
+/* 1. Setup the full-page background */
+body.login {
+    background-color: #f0f2f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+}
+
+/* 2. Create the main horizontal card */
+#login {
+    width: 800px !important; /* Total width of the card */
+    padding: 0 !important;
+    margin: auto;
+    background: #fff;
+    display: flex;
+    flex-direction: row; /* Aligns image and form side-by-side */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Light box shadow */
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 3. The Left Side (Image Area) */
+#login::before {
+    content: "";
+    width: 50%;
+    background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    display: block;
+    min-height: 500px;
+}
+
+/* 4. The Right Side (Form Area) */
+#login form {
+    width: 50%;
+    margin-top: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 40px 30px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 5. Adjusting the WordPress Logo (Centered above form) */
+#login h1 {
+   display:none;
+}
+
+#login h1 a {
+    width: 100% !important;
+    background-size: contain !important;
+    margin-bottom: 10px !important;
+}
+
+/* 6. Form Styling (Inputs & Button) */
+#login label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+#login form::before
+ {
+    content: '';
+    background: url(https://specialistpracticeexcellence.com/wp-content/uploads/2019/11/Minimal-Logo.png);
+    width: 134px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0 0 20px;
+}
+#login input[type="text"], #login input[type="password"] {
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    padding: 5px 10px !important;
+    background: #fdfdfd;
+    font-size: 18px;
+}
+
+#login .button-primary {
+    background: #27568A !important;
+    border: none !important;
+    border-radius: 6px !important;
+    width: 100%;
+    height: 45px !important;
+    font-weight: bold !important;
+    margin-top: 20px !important;
+}
+
+/* 7. Footer Links (Lost Password) */
+#login #nav, #login #backtoblog {
+      position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: auto;
+    padding: 0 !important;
+    text-align: center;
+}
+
+/* 8. Mobile Responsiveness */
+@media (max-width: 768px) {
+    #login {
+        width: 100% !important;
+        flex-direction: column;
+        margin: 20px 40px !important;
+    }
+    #login::before {
+        width: 100%;
+        min-height: 200px;
+    }
+    body.login {
+padding: 0 40px;
+}
+    #login form {
+      width: auto !important;
+left: 0;
+        position: relative;
+        right: auto;
+        top: auto;
+    }
+     #login #nav, #login #backtoblog {
+        width: 100% !important;
+     }
+    
+}
