@@ -77,6 +77,21 @@ body.login {
   margin-bottom: 5px;
 }
 
+#login_error {
+  position: absolute;
+  width: 100%;
+  padding: 10px;
+  top: 10px;
+  margin: 0 auto;
+  left: 0;
+  z-index: 2;
+  display: block;
+  max-width: 325px;
+  left: 10px;
+}
+#login_error p {
+  width: auto;
+}
 #login form::before {
   content: "";
   background: url(https://specialistpracticeexcellence.com/wp-content/uploads/2019/11/Minimal-Logo.png);
@@ -141,5 +156,11 @@ body.login {
   #login #nav,
   #login #backtoblog {
     width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #login_error {
+    max-width: 195px;
   }
 }
