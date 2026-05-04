@@ -20,33 +20,23 @@ body.login {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Light box shadow */
   margin: 0 auto;
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
   gap: 10px;
-}
-
-.login .notice-error {
-  grid-column: 2;
-  grid-row: 1;
 }
 
 /* 3. The Left Side (Image Area) */
 #login::before {
   content: "";
-  width: 100%;
+  width: 50%;
   background-image: url("https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"); /* Replace with your image URL */
   background-size: cover;
   background-position: center;
   display: block;
   min-height: 500px;
-  grid-column: 1;
-  grid-row: 1 / span 2;
 }
 
 /* 4. The Right Side (Form Area) */
 #login form {
-  width: auto;
+  width: 50%;
   margin-top: 0 !important;
   border: none !important;
   box-shadow: none !important;
@@ -54,8 +44,6 @@ body.login {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  grid-column: 2;
-  grid-row: 2;
   margin: 0;
   padding: 5px 20px 40px 0px !important;
 }
