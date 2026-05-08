@@ -140,10 +140,14 @@ body.login {
     position: relative;
     right: auto;
     top: auto;
+    padding: 20px !important;
   }
   #login #nav,
   #login #backtoblog {
     width: 100% !important;
+    position: relative;
+    bottom: 0;
+    right: 0;
   }
 }
 
